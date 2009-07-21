@@ -46,7 +46,8 @@ unsigned hamdist(unsigned x, unsigned y) {
 //fills an array w/ rand numbers between 0-1000 inclusive
 //these are the indices of 12 words in dict
 void get_nums(int *nums_arr, int size) {
-  int i,num;
+  int i;
+  unsigned int num;
   for(i = 0; i < size; i++) {
     fread(&num, 2, 1, random_file);
     nums_arr[i] = num % 1000;
@@ -105,6 +106,7 @@ int main(void) {
       memcpy(top_string, buf, len+1);
       top_distance = dist;
       printf("%i\t\"%s\"\n", top_distance, top_string);
+      fflush(stdout);
     }
   }
 
