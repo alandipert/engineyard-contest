@@ -1,0 +1,19 @@
+Building on Linux:
+
+    make linux
+
+Building on OS X:
+
+    make osx
+
+Strategy:
+
+This just tries combinations of 12 words from words.txt, and tests the Hamming distance to see if it's the lowest so far.
+It doesn't append the 5 random characters and it doesn't mess with case.
+
+Checking:
+
+    make check
+
+./check "some string" will print out the challenge hash, the hash of arg[1], and the Hamming distance.  You can use this
+to double check results.
